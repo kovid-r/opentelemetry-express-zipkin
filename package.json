@@ -1,0 +1,41 @@
+{
+  "name": "express-zipkin-opentelemetry",
+  "private": true,
+  "version": "0.1.0",
+  "description": "OpenTelemetry with Express.js and Zipkin",
+  "main": "index.js",
+  "scripts": {
+    "server": "cross-env EXPORTER=zipkin node ./server.js",
+    "client": "cross-env EXPORTER=zipkin node ./client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kovid-r/express-zipkin-opentelemetry.git"
+  },
+  "keywords": [
+    "opentelemetry",
+    "express",
+    "tracing"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "author": "Kovid Rathee",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@opentelemetry/api": "^1.0.2",
+    "@opentelemetry/exporter-zipkin": "^0.25.0",
+    "@opentelemetry/instrumentation": "^0.25.0",
+    "@opentelemetry/instrumentation-express": "^0.23.0",
+    "@opentelemetry/instrumentation-http": "^0.25.0",
+    "@opentelemetry/resources": "^0.25.0",
+    "@opentelemetry/semantic-conventions": "^0.25.0",
+    "@opentelemetry/sdk-trace-node": "^0.25.0",
+    "@opentelemetry/sdk-trace-base": "^0.25.0",
+    "axios": "^0.21.1",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1"
+  },
+  "homepage": "https://github.com/kovid-r/express-zipkin-opentelemetry#readme",
+  "devDependencies": {}
+}
