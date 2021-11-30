@@ -1,6 +1,6 @@
-# OpenTelemetry with Zipkin for Express.js Applications
+# Automatic Instrumentation for Express.js using OpenTelemetry and Zipkin
 
-This is a sample application which deploys a mock Express.js server along with a mock client to send requests to the server. OpenTelemetry is used to build in instrumentation for this app. Zipkin is used to expose the instrumentation data via the browser.
+This is a sample application which deploys a mock Express.js server along with a mock client to send requests to the server. OpenTelemetry is used to build in automatic instrumentation for this app. Zipkin is used to expose the instrumentation data via the browser.
 
 ## Repository
 
