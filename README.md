@@ -72,6 +72,10 @@ Here's what a part of the trace will look like:
 }
 ```
 
+Here's what the summary of the trace would look like on Zipkin:
+
+<img width="1680" alt="Screen Shot 2021-12-01 at 1 56 57 am" src="https://user-images.githubusercontent.com/62409489/144073569-88f7915d-07ac-4aa7-a863-e7177bc36097.png">
+
 ## License
 
 [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/)
