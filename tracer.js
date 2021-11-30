@@ -23,7 +23,7 @@ module.exports = (serviceName) => {
     resource: new Resource({
       [ResourceAttributesSC.SERVICE_NAME]: serviceName,
     }),
-    sampler: filterSampler(ignoreHealthCheck, new AlwaysOnSampler()),
+    sampler: filterSampler(ignoreStatusCheck, new AlwaysOnSampler()),
   });
   registerInstrumentations({
     tracerProvider: provider,
@@ -41,7 +41,7 @@ module.exports = (serviceName) => {
 
   provider.register();
 
-  return opentelemetry.trace.getTracer('express-example');
+  return opentelemetry.trace.getTracer('express-zipkin-opentelemetry');
 };
 
 function filterSampler(filterFn, parent) {
@@ -58,6 +58,6 @@ function filterSampler(filterFn, parent) {
   }
 }
 
-function ignoreHealthCheck(spanName, spanKind, attributes) {
-  return spanKind !== opentelemetry.SpanKind.SERVER || attributes[SemanticAttributes.HTTP_ROUTE] !== "/health";
+function ignoreStatusCheck(spanName, spanKind, attributes) {
+  return spanKind !== opentelemetry.SpanKind.SERVER || attributes[SemanticAttributes.HTTP_ROUTE] !== "/status";
 }

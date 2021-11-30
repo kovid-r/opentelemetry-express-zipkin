@@ -29,7 +29,7 @@ const login = (req, res, next) => {
 };
 
 app.use(express.json());
-app.get('/health', (req, res) => res.status(200).send("HEALTHY"));
+app.get('/status', (req, res) => res.status(200).send("OK"));
 app.get('/test', async (req, res) => {
 
   const createdMovie = await axios.post(`http://localhost:${PORT}/movies`, {
